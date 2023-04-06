@@ -81,5 +81,5 @@ SELECT COUNT(*) AS qtsPokemons, type FROM pokemons GROUP BY type;
 -- MOSTRAR 3 LINHAS A PARTIR DA QUINTA LINHA;
 SELECT * FROM pokemons LIMIT 3 OFFSET 4;
 
-
+SELECT * FROM pokemons WHERE type="fire" OR type="grass" ORDER BY attack ASC LIMIT 3 OFFSET 2;
 
