@@ -1,3 +1,4 @@
+-- Active: 1680804391177@@127.0.0.1@3306
 -- Conecte o arquivo pratica-aprofundamento-sql.db com a extensão MySQL e ative a conexão aqui
 
 -- Deletar tabela
@@ -43,3 +44,42 @@ VALUES
 SELECT * FROM pokemons;
 
 -- Práticas
+
+SELECT * FROM pokemons WHERE speed > 60;
+
+SELECT * FROM pokemons WHERE attack >= 60 AND special_attack >= 60;
+
+SELECT * FROM pokemons WHERE name LIKE "%saur";
+
+-- Prática guiada 2
+
+SELECT * FROM pokemons;
+
+-- MÉDIA SIMPLES DA COLUNA"HP"; 
+SELECT AVG(hp) AS MédiaDaColunaHp FROM pokemons;
+
+--BUSCA DO NÚMERO DE LINHAS DA TABELA;
+SELECT COUNT(*) FROM pokemons;
+
+--RENOMEANDO O NOME PARA MELHOR ENTENDIMENTO DO RESULTADO;
+SELECT COUNT(*) AS numeroLinhasDaTAbela FROM pokemons;
+
+--soma de uma coluna;
+SELECT SUM(HP) AS somaDaColunaHp FROM pokemons;
+
+-- PRÁTICA GUIADA 3
+
+-- ORDENAR PELA COLUNA DE DEFENSE NA ORDEM DECRESCENTE;
+SELECT * FROM pokemons ORDER BY defense DESC;
+
+-- ORDEM CRESCENTE;
+SELECT * FROM pokemons ORDER BY defense ASC;
+
+-- SEPARA OS GRUPOS E CONTA A QUANTIDADE DE LINHAS EM CADA GRUPO;
+SELECT COUNT(*) AS qtsPokemons, type FROM pokemons GROUP BY type;
+
+-- MOSTRAR 3 LINHAS A PARTIR DA QUINTA LINHA;
+SELECT * FROM pokemons LIMIT 3 OFFSET 4;
+
+
+
